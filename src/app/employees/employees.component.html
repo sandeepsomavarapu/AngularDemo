@@ -1,0 +1,26 @@
+<html>
+<body>
+<h1>empInfo</h1>
+<table border="2">
+  <tr>
+  <th>EmpID</th>
+  <th>Name</th>
+  <th>DOB</th>
+  <th>Gender</th>
+  <th>Salary</th>
+  </tr>
+  <tr *ngFor="let emp1 of emp">
+  <td>{{emp1.empcode}}</td>
+  <td>{{emp1.name|uppercase}}</td><!--  ng  g p pname-->
+  <td>{{emp1.dateOfBirth|date:'fullDate'}}</td>
+  <td>{{emp1.gender}}</td>
+  <td>{{emp1.sal|currency:'INR'}}</td>
+  </tr>
+  <tr *ngIf="!emp||emp.length==0">
+    <td colspan="5">No employees to display  </td>
+  </tr>
+  </table>
+
+  </body>
+  
+  </html>

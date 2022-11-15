@@ -1,0 +1,49 @@
+
+<html>
+    <body >
+ 
+   
+         <div>
+           <h1>EMP INFO USING TWO WAY DATA BINDING</h1>
+             <table border="2">
+                 <tr> <td>First Name</td>
+                     <td>
+ <input type="text" [(ngModel)]="employee.FirstName" />
+                     </td></tr>
+                 <tr><td>Last Name</td>
+                     <td>
+  <input type="text"  [(ngModel)]="employee.LastName" />
+                     </td>
+                 </tr>
+                 <tr><td>Gender</td>
+                     <td>
+     <input type="text"  [(ngModel)]="employee.Gender" />
+                     </td>
+                 </tr>
+             </table>
+             <br/>
+             <table border="2">
+                 <tr>
+                     <td>First Name</td>
+                     <td>
+                         {{ employee.FirstName}}
+                     </td>
+                 </tr>
+                 <tr>
+                     <td>Last Name</td>
+                     <td>
+                         {{ employee.LastName }}
+                     </td>
+                 </tr>
+                 <tr>
+                     <td>Gender</td>
+                     <td>
+                         {{ employee.Gender }}
+                     </td>
+                 </tr>
+             </table>
+         </div>
+ <span *ngIf='!result'>welcome to anurag</span>
+ 
+     </body>
+ </html>
