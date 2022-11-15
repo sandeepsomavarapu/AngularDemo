@@ -7,6 +7,7 @@ import { RegisterComponent } from './register/register.component';
 import { EmployeesComponent } from './employees/employees.component';
 import { Emp2wayComponent } from './emp2way/emp2way.component';
 import { FormsModule } from '@angular/forms';
+import { GenderPipe } from './gender.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     RegisterComponent,
     EmployeesComponent,
-    Emp2wayComponent
+    Emp2wayComponent,
+    GenderPipe
   ],
   imports: [
     BrowserModule,

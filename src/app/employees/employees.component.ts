@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmployeesComponent implements OnInit {
 emp:any[];
+result:boolean=false;
   constructor() { //directives *ngFor  @ngSwitch *ngIf  pipe 
     this.emp=[
       {empcode:'emp101',name:"akash",dateOfBirth:'10/11/1993',gender:"male",sal:12000.123},
@@ -15,6 +16,15 @@ emp:any[];
     {empcode:'emp104',name:"deepa" ,dateOfBirth:'07/15/1988',gender:"female",sal:42000.900},
     {empcode:'emp105',name:"ramya" ,dateOfBirth:'06/19/1993',gender:"female",sal:200000.63125}
       ];
+  }
+  delete(emp:any)
+  {
+  this.result= window.confirm("Are you sure.....");
+  if(this.result){
+    let index = this.emp.indexOf(emp);
+    this.emp.splice(index, 1);
+  }
+
   }
   ngOnInit(): void {
   }

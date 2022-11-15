@@ -11,10 +11,11 @@
   </tr>
   <tr *ngFor="let emp1 of emp">
   <td>{{emp1.empcode}}</td>
-  <td>{{emp1.name|uppercase}}</td><!--  ng  g p pname-->
+  <td>{{emp1.name|genderpipe:emp1.gender}}</td><!--  ng  g p pname-->
   <td>{{emp1.dateOfBirth|date:'fullDate'}}</td>
   <td>{{emp1.gender}}</td>
   <td>{{emp1.sal|currency:'INR'}}</td>
+  <td><button (click)="delete(emp1)">DELETE</button></td>
   </tr>
   <tr *ngIf="!emp||emp.length==0">
     <td colspan="5">No employees to display  </td>
