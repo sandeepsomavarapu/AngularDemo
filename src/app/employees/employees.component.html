@@ -1,7 +1,8 @@
 <html>
 <body>
+ 
 <h1>empInfo</h1>
-<table border="2">
+<table  class="table table-hover" >
   <tr>
   <th>EmpID</th>
   <th>Name</th>
@@ -15,7 +16,7 @@
   <td>{{emp1.dateOfBirth|date:'fullDate'}}</td>
   <td>{{emp1.gender}}</td>
   <td>{{emp1.sal|currency:'INR'}}</td>
-  <td><button (click)="delete(emp1)">DELETE</button></td>
+  <td> <i class="fas fa-trash"(click) =delete(emp1)></i></td>
   </tr>
   <tr *ngIf="!emp||emp.length==0">
     <td colspan="5">No employees to display  </td>

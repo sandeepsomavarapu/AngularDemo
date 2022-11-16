@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'employees',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class EmployeesComponent implements OnInit {
 emp:any[];
 result:boolean=false;
-  constructor() { //directives *ngFor  @ngSwitch *ngIf  pipe 
+  constructor() { //directives *ngFor  @ngSwitch *ngIf  pipe  dependency injection
     this.emp=[
       {empcode:'emp101',name:"akash",dateOfBirth:'10/11/1993',gender:"male",sal:12000.123},
      {empcode:'emp102',name:"pranay" ,dateOfBirth:'08/23/1990',gender:"male",sal:22000.123},
@@ -23,6 +24,7 @@ result:boolean=false;
   if(this.result){
     let index = this.emp.indexOf(emp);
     this.emp.splice(index, 1);
+   // this.router.navigate(['login']);
   }
 
   }

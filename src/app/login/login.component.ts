@@ -2,13 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-login',
-  template: `
-  
-  
-  <p>Am from Login component : {{orgName}}</p>
-
-  
-  `,
+  templateUrl:'./login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
