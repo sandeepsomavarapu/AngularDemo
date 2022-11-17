@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LoginService } from '../login.service';
 
 @Component({
   selector: 'employees',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 export class EmployeesComponent implements OnInit {
 emp:any[];
 result:boolean=false;
-  constructor() { //directives *ngFor  @ngSwitch *ngIf  pipe  dependency injection
+  constructor(private service:LoginService,private router:Router) { //directives *ngFor  @ngSwitch *ngIf  pipe  dependency injection
     this.emp=[
       {empcode:'emp101',name:"akash",dateOfBirth:'10/11/1993',gender:"male",sal:12000.123},
      {empcode:'emp102',name:"pranay" ,dateOfBirth:'08/23/1990',gender:"male",sal:22000.123},
@@ -27,6 +28,11 @@ result:boolean=false;
    // this.router.navigate(['login']);
   }
 
+  }
+  logout()
+  {
+  this.service.logoutCheck();
+    this.router.navigate(['login'])
   }
   ngOnInit(): void {
   }

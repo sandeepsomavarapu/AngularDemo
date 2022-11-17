@@ -8,6 +8,7 @@ import { EmployeesComponent } from './employees/employees.component';
 import { Emp2wayComponent } from './emp2way/emp2way.component';
 import { FormsModule } from '@angular/forms';
 import { GenderPipe } from './gender.pipe';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { GenderPipe } from './gender.pipe';
     BrowserModule,
     AppRoutingModule,FormsModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
