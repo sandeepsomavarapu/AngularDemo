@@ -23,6 +23,17 @@ export class LoginService {
       return false;
     }
   }
+  validate(username:string,password:string): boolean {
+
+    if (username === "accenture" && password === "accenture123") {
+      alert("Login Success");
+      return true;
+    }
+    else {
+      alert("Enter Valid Credentials");
+      return false;
+    }
+  }
   logoutCheck(): boolean {
       sessionStorage.removeItem("username");
       sessionStorage.removeItem("password");
@@ -32,4 +43,13 @@ export class LoginService {
   }
   //localstorage session storage 
 
+}
+export class user{
+  constructor(username,password)
+ {
+this.username=username;
+this.password=password;
+ } 
+username:string;
+password:string;
 }

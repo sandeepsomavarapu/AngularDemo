@@ -1,16 +1,17 @@
 import { TestBed } from '@angular/core/testing';
 
-import { LoginService } from './login.service';
+import { LoginService, user } from './login.service';
 
-describe('LoginService', () => {
+fdescribe('LoginService', () => {
   let service: LoginService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
     service = TestBed.inject(LoginService);
+    console.log('before each test case ....');
   });
 
   it('should be created', () => {
-    expect(service).toBeTruthy();
+    expect(service.validate('accenture','accenture')).toBe(true);
   });
 });
